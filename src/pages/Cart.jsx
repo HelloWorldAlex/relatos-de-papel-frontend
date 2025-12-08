@@ -1,24 +1,15 @@
 import useLocalStorage from "../hooks/useLocalStorage";
-import '../styles.css'; 
+import '../styles.css';
 import { useNavigate } from "react-router-dom";
 
 export default function Cart() {
- 
+
   const { value: cart, clear: clearCart } = useLocalStorage("cart");
   const navigate = useNavigate();
 
   const handleCheckout = () => {
-    
-    alert("Pedido realizado con éxito"); 
-    
-  
-    clearCart(); 
-    
-   
-    navigate("/home"); 
+    navigate("/checkout");
   };
-  
-    console.log("Contenido del carrito en Cart.jsx:", cart);
 
   return (
     <div className="rp-container">
@@ -35,16 +26,16 @@ export default function Cart() {
               </li>
             ))}
           </ul>
-          
-          <button 
-            onClick={clearCart} 
-            className="rp-button--error" 
+
+          <button
+            onClick={clearCart}
+            className="rp-button--error"
           >
             Vaciar carrito
           </button>
 
-            <button
-            onClick={handleCheckout} 
+          <button
+            onClick={handleCheckout}
             style={{ marginTop: 10, background: "green", color: "white", padding: 10, marginLeft: 10 }}
           >
             Finalizar pedido

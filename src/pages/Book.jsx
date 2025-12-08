@@ -13,10 +13,19 @@ export default function Book() {
   return (
     <main style={{ padding: 20 }}>
       <h2>{book.title}</h2>
+      <p>Código: {book.code}</p>
       <p>Autor: {book.author}</p>
       <p>Precio: ${book.price.toFixed(2)}</p>
       <p>{book.description}</p>
-      <button onClick={() => { addItem(book); navigate('/cart'); }}>Añadir al carrito y ver carrito</button>
+
+      <button
+        onClick={() => {
+          addItem(book);
+          navigate('/cart');
+        }}
+      >
+        Añadir al carrito y ver carrito
+      </button>
     </main>
   );
 }
