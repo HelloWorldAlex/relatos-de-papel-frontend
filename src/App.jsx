@@ -1,4 +1,4 @@
-import "./App.css";
+import "./styles.css";
 
 import Navbar from "./components/Navbar";
 import useLocalStorage from "./hooks/useLocalStorage";
@@ -35,10 +35,7 @@ export default function App() {
             element={<Book addItemToCart={cartProps.addItem} />}
           />
 
-          <Route
-            path="/cart"
-            element={<Cart cartProps={cartProps} />}
-          />
+          <Route path="/cart" element={<Cart cartProps={cartProps} />} />
 
           <Route
             path="/checkout"

@@ -13,7 +13,9 @@ export default function Navbar({ cart }) {
       </div>
 
       <div>
-        <Link to="/cart" className="rp-nav__link">Carrito ({totalItems})</Link>
+        <Link to="/cart" className="rp-nav__link">
+          Carrito ({totalItems})
+        </Link>
       </div>
     </nav>
   );
